@@ -1,0 +1,6 @@
+---
+- name: this playbook execute the role setup_apache
+  hosts: all
+  become: True
+  roles:
+    - setup_apache

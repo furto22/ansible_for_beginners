@@ -1,0 +1,11 @@
+---
+- name: playbook to test ansible vault
+  hosts: all
+  become: true
+  vars_files:
+    - vault_pass.yml
+  tasks:
+  - name: clone a repository
+    git:
+      repo: https://furto22:{{ password }}@github.com/furto22/vault.git
+      dest: /opt/ansible/test_vault

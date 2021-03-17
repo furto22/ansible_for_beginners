@@ -1,0 +1,10 @@
+---
+- name: this playbook creates a file or directory
+  hosts: all
+  become: True
+  gather_facts: no
+  tasks:
+  - name: create a directory
+    file:
+      path: /home/ansadmin/demodir2
+      state: directory

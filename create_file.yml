@@ -1,0 +1,9 @@
+---
+- name: this playbook creates a file or directory
+  hosts: all
+  #become: True
+  tasks:
+  - name: removinf a file
+    file:
+      path: /home/ansadmin/demofile2
+      state: absent

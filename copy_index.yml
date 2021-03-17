@@ -1,0 +1,10 @@
+---
+- name: ansible playbook to copy index.html to apache
+  hosts: all
+  become: True
+  tasks:
+  - name: copy index.html
+    copy:
+      src: /opt/ansible/index.html
+      dest: /var/www/html
+      mode: 0666
